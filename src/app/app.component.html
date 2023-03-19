@@ -2,5 +2,26 @@
   <p>App component loaded</p>
   <fa-other></fa-other>
   <div id="some"></div>
-  <fa-another></fa-another>
+  <fa-another>
+    <div>
+      <h2>Hello</h2>
+      <p>stying applied in app component is here as this content is not a part of another component </p>
+    </div>
+  </fa-another>
+  <fa-another>
+    <div>Another text</div>
+  </fa-another>
+  <app-cockpit (serverAdded)="addServer($event)"></app-cockpit> <!--applying an alias-->
+
+  <div class="container">
+    <button class="btn btn-primary" (click)="changeFirstElement()">
+      change first element
+    </button>
+    <button class="btn btn-danger" (click)="deleteFirstElement()">
+      delete first element
+    </button>
+    <app-server *ngFor="let element of elements" [serverElement]="element" [name]="element.name">
+      <p #serverContent> {{ element.content }}</p>
+    </app-server>
+  </div>
 </div>

@@ -1,0 +1,20 @@
+<div class="row" [ngStyle]="{'border': '2px solid ' + color}" >
+    <div class="panel shadow-sm">
+        <div class="panel-title" [ngStyle]="{'color': color, 'font-style': serverElement.serverType === 'blueprint' ? 'italic': 'normal'}" 
+        #header>
+            <!-- {{ serverElement.serverType === 'blueprint' ? 'Server Blue Print': 'Server'}} -->
+            <!-- {{ serverElement.name }} -->
+            {{ name }}
+          </div>
+          <hr>
+        <div class="panel-body">
+            <!-- <div [ngClass]="{'card-text': true, 'text-primary': false, 'text-secondary': true}">
+                {{ serverElement.name }}
+            </div> -->
+        </div>
+        <div>
+            <!-- <p> Server content </p> -->
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

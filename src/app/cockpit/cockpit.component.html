@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="shadow-sm p-5">
+        <form >
+            <!-- server name -->
+            <div class="row mb-3">
+                <div class="form-control-group col-sm-12">
+                    <label for="serverName" class="form-label">server name: </label>
+                    <!-- <input type="text" id="serverName"  name="serverName" class="form-control" placeholder="server name" [(ngModel)]="sName" /> -->
+                    <input type="text" 
+                    id="serverName"  
+                    name="serverName"
+                    class="form-control" 
+                    placeholder="server name" #serverInputElement/>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="form-control-group col-sm-12">
+                    <label for="serverContent" class="form-label">server content: </label>
+                    <!-- <textarea
+                    id="serverContent"  
+                    name="serverContent"
+                    class="form-control" 
+                    placeholder="server content" 
+                    [(ngModel)]="serverContent"></textarea> -->
+                    <textarea
+                    id="serverContent"  
+                    name="serverContent"
+                    class="form-control" 
+                    placeholder="server content" 
+                    #serverContent></textarea>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <button class="btn btn-large btn-primary" (click)="onClick('server', serverInputElement)">
+                        add server
+                
+                    </button>
+                </div>
+                <div class="col-sm-6">
+                    <button class="btn btn-large btn-secondary" (click)="onClick('blueprint', serverInputElement)">
+                        add server blueprint
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

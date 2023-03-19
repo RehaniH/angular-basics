@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { OtherComponent } from './other/other.component';
 import { SomeComponent} from "./some/some.component";
 import { AnotherComponent } from './other/another.component';
+import { ServerComponent } from './server/server.component';
+import { CockpitComponent } from './cockpit/cockpit.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,9 +15,12 @@ import { AnotherComponent } from './other/another.component';
     OtherComponent,
     SomeComponent,
     AnotherComponent,
+    ServerComponent,
+    CockpitComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
